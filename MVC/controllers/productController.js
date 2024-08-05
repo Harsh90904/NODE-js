@@ -1,22 +1,22 @@
-const Product = require('../models/product');
+const product = require('../models/product');
 
 const getProducts = async (req, res) => {
-    let data = await User.find()
+    let data = await product.find()
     res.send(data)
 }
 
 const createProduct = async (req, res) => {
-    let data = await User.create(req.body)
+    let data = await product.create(req.body)
     res.status(201).send(data)
 }
 const updateProduct = async (req, res) => {
     let {id} = req.params;
-    let data = await User.findByIdAndUpdate(id, req.body);
+    let data = await product.findByIdAndUpdate(id, req.body);
     res.send(data);
 }
 const deleteProduct = async (req, res) => {
     let {id} = req.params;
-     let data = await User.findByIdAndDelete(id);
+     let data = await product.findByIdAndDelete(id);
     res.send(data);
 }
 
