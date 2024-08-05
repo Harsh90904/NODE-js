@@ -6,5 +6,5 @@ const productSchema = new mongoose.Schema({
     description: String,
     inStock:  Boolean
 });
-
-module.exports = productSchema;
+let product = mongoose.model("product", productSchema)
+module.exports = product;
