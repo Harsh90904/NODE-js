@@ -7,4 +7,4 @@ const productSchema = new mongoose.Schema({
     inStock:  Boolean
 });
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = productSchema;
