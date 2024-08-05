@@ -5,7 +5,7 @@ const userRouter = Router();
 
 userRouter.post('/products',createProduct);
 userRouter.get('/products', getProducts);
-userRouter.put('/products/:id', updateProduct);
+userRouter.patch('/products/:id', updateProduct);
 userRouter.delete('/products/:id', deleteProduct);
 
 module.exports = userRouter;
